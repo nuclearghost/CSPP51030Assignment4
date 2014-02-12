@@ -14,14 +14,20 @@
 		F335009118AB15860086033B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F335009018AB15860086033B /* main.m */; };
 		F335009518AB15860086033B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F335009418AB15860086033B /* AppDelegate.m */; };
 		F335009818AB15860086033B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F335009618AB15860086033B /* Main.storyboard */; };
-		F335009B18AB15860086033B /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F335009A18AB15860086033B /* FirstViewController.m */; };
-		F335009E18AB15860086033B /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F335009D18AB15860086033B /* SecondViewController.m */; };
 		F33500A018AB15860086033B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F335009F18AB15860086033B /* Images.xcassets */; };
 		F33500A718AB15860086033B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F33500A618AB15860086033B /* XCTest.framework */; };
 		F33500A818AB15860086033B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F335008418AB15860086033B /* Foundation.framework */; };
 		F33500A918AB15860086033B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F335008818AB15860086033B /* UIKit.framework */; };
 		F33500B118AB15860086033B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F33500AF18AB15860086033B /* InfoPlist.strings */; };
 		F33500B318AB15860086033B /* Duck_GeniusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F33500B218AB15860086033B /* Duck_GeniusTests.m */; };
+		F33500BD18AB188C0086033B /* Recents.png in Resources */ = {isa = PBXBuildFile; fileRef = F33500BC18AB188C0086033B /* Recents.png */; };
+		F33500BF18AB189C0086033B /* Recents@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F33500BE18AB189C0086033B /* Recents@2x.png */; };
+		F33500C118AB18D80086033B /* Search.png in Resources */ = {isa = PBXBuildFile; fileRef = F33500C018AB18D80086033B /* Search.png */; };
+		F33500C318AB18E70086033B /* Search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F33500C218AB18E70086033B /* Search@2x.png */; };
+		F33500C818AB20C30086033B /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F33500C718AB20C30086033B /* SearchViewController.m */; };
+		F33500CB18AB20DE0086033B /* RecentSearchesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F33500CA18AB20DE0086033B /* RecentSearchesViewController.m */; };
+		F33500CE18AB21BF0086033B /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F33500CD18AB21BF0086033B /* WebViewController.m */; };
+		F33500D118AB244F0086033B /* SearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F33500D018AB244F0086033B /* SearchCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,16 +52,24 @@
 		F335009318AB15860086033B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F335009418AB15860086033B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		F335009718AB15860086033B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F335009918AB15860086033B /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		F335009A18AB15860086033B /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		F335009C18AB15860086033B /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		F335009D18AB15860086033B /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		F335009F18AB15860086033B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F33500A518AB15860086033B /* Duck GeniusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Duck GeniusTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F33500A618AB15860086033B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		F33500AE18AB15860086033B /* Duck GeniusTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Duck GeniusTests-Info.plist"; sourceTree = "<group>"; };
 		F33500B018AB15860086033B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F33500B218AB15860086033B /* Duck_GeniusTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Duck_GeniusTests.m; sourceTree = "<group>"; };
+		F33500BC18AB188C0086033B /* Recents.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Recents.png; path = ../../../../../../Downloads/pixellove_free/1x_normal/Recents.png; sourceTree = "<group>"; };
+		F33500BE18AB189C0086033B /* Recents@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Recents@2x.png"; path = "../../../../../../Downloads/pixellove_free/2x_normal/Recents@2x.png"; sourceTree = "<group>"; };
+		F33500C018AB18D80086033B /* Search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Search.png; path = ../../../../../../Downloads/pixellove_free/1x_normal/Search.png; sourceTree = "<group>"; };
+		F33500C218AB18E70086033B /* Search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Search@2x.png"; path = "../../../../../../Downloads/pixellove_free/2x_normal/Search@2x.png"; sourceTree = "<group>"; };
+		F33500C618AB20C30086033B /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		F33500C718AB20C30086033B /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		F33500C918AB20DE0086033B /* RecentSearchesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecentSearchesViewController.h; sourceTree = "<group>"; };
+		F33500CA18AB20DE0086033B /* RecentSearchesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecentSearchesViewController.m; sourceTree = "<group>"; };
+		F33500CC18AB21BF0086033B /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		F33500CD18AB21BF0086033B /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		F33500CF18AB244F0086033B /* SearchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchCell.h; sourceTree = "<group>"; };
+		F33500D018AB244F0086033B /* SearchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +99,7 @@
 		F335007818AB15850086033B = {
 			isa = PBXGroup;
 			children = (
+				F33500C518AB208F0086033B /* Images */,
 				F335008A18AB15860086033B /* Duck Genius */,
 				F33500AC18AB15860086033B /* Duck GeniusTests */,
 				F335008318AB15860086033B /* Frameworks */,
@@ -117,11 +132,15 @@
 			children = (
 				F335009318AB15860086033B /* AppDelegate.h */,
 				F335009418AB15860086033B /* AppDelegate.m */,
+				F33500C618AB20C30086033B /* SearchViewController.h */,
+				F33500C718AB20C30086033B /* SearchViewController.m */,
+				F33500CC18AB21BF0086033B /* WebViewController.h */,
+				F33500CD18AB21BF0086033B /* WebViewController.m */,
+				F33500C918AB20DE0086033B /* RecentSearchesViewController.h */,
+				F33500CA18AB20DE0086033B /* RecentSearchesViewController.m */,
 				F335009618AB15860086033B /* Main.storyboard */,
-				F335009918AB15860086033B /* FirstViewController.h */,
-				F335009A18AB15860086033B /* FirstViewController.m */,
-				F335009C18AB15860086033B /* SecondViewController.h */,
-				F335009D18AB15860086033B /* SecondViewController.m */,
+				F33500CF18AB244F0086033B /* SearchCell.h */,
+				F33500D018AB244F0086033B /* SearchCell.m */,
 				F335009F18AB15860086033B /* Images.xcassets */,
 				F335008B18AB15860086033B /* Supporting Files */,
 			);
@@ -155,6 +174,17 @@
 				F33500AF18AB15860086033B /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F33500C518AB208F0086033B /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				F33500C218AB18E70086033B /* Search@2x.png */,
+				F33500C018AB18D80086033B /* Search.png */,
+				F33500BE18AB189C0086033B /* Recents@2x.png */,
+				F33500BC18AB188C0086033B /* Recents.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,7 +264,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F33500A018AB15860086033B /* Images.xcassets in Resources */,
+				F33500C118AB18D80086033B /* Search.png in Resources */,
 				F335008F18AB15860086033B /* InfoPlist.strings in Resources */,
+				F33500BF18AB189C0086033B /* Recents@2x.png in Resources */,
+				F33500C318AB18E70086033B /* Search@2x.png in Resources */,
+				F33500BD18AB188C0086033B /* Recents.png in Resources */,
 				F335009818AB15860086033B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,10 +288,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F335009E18AB15860086033B /* SecondViewController.m in Sources */,
 				F335009518AB15860086033B /* AppDelegate.m in Sources */,
-				F335009B18AB15860086033B /* FirstViewController.m in Sources */,
+				F33500CE18AB21BF0086033B /* WebViewController.m in Sources */,
+				F33500C818AB20C30086033B /* SearchViewController.m in Sources */,
+				F33500D118AB244F0086033B /* SearchCell.m in Sources */,
 				F335009118AB15860086033B /* main.m in Sources */,
+				F33500CB18AB20DE0086033B /* RecentSearchesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

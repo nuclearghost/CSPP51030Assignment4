@@ -1,5 +1,5 @@
 //
-//  FirstViewController.h
+//  WebViewController.h
 //  Duck Genius
 //
 //  Created by Mark Meyer on 2/11/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController
+@interface WebViewController : UIViewController
 
 @end
