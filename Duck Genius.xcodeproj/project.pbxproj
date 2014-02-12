@@ -1,0 +1,481 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F335008518AB15860086033B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F335008418AB15860086033B /* Foundation.framework */; };
+		F335008718AB15860086033B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F335008618AB15860086033B /* CoreGraphics.framework */; };
+		F335008918AB15860086033B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F335008818AB15860086033B /* UIKit.framework */; };
+		F335008F18AB15860086033B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F335008D18AB15860086033B /* InfoPlist.strings */; };
+		F335009118AB15860086033B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F335009018AB15860086033B /* main.m */; };
+		F335009518AB15860086033B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F335009418AB15860086033B /* AppDelegate.m */; };
+		F335009818AB15860086033B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F335009618AB15860086033B /* Main.storyboard */; };
+		F335009B18AB15860086033B /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F335009A18AB15860086033B /* FirstViewController.m */; };
+		F335009E18AB15860086033B /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F335009D18AB15860086033B /* SecondViewController.m */; };
+		F33500A018AB15860086033B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F335009F18AB15860086033B /* Images.xcassets */; };
+		F33500A718AB15860086033B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F33500A618AB15860086033B /* XCTest.framework */; };
+		F33500A818AB15860086033B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F335008418AB15860086033B /* Foundation.framework */; };
+		F33500A918AB15860086033B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F335008818AB15860086033B /* UIKit.framework */; };
+		F33500B118AB15860086033B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F33500AF18AB15860086033B /* InfoPlist.strings */; };
+		F33500B318AB15860086033B /* Duck_GeniusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F33500B218AB15860086033B /* Duck_GeniusTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F33500AA18AB15860086033B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F335007918AB15850086033B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F335008018AB15850086033B;
+			remoteInfo = "Duck Genius";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F335008118AB15860086033B /* Duck Genius.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Duck Genius.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F335008418AB15860086033B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F335008618AB15860086033B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F335008818AB15860086033B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F335008C18AB15860086033B /* Duck Genius-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Duck Genius-Info.plist"; sourceTree = "<group>"; };
+		F335008E18AB15860086033B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F335009018AB15860086033B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F335009218AB15860086033B /* Duck Genius-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Duck Genius-Prefix.pch"; sourceTree = "<group>"; };
+		F335009318AB15860086033B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F335009418AB15860086033B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F335009718AB15860086033B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F335009918AB15860086033B /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		F335009A18AB15860086033B /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		F335009C18AB15860086033B /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		F335009D18AB15860086033B /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		F335009F18AB15860086033B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F33500A518AB15860086033B /* Duck GeniusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Duck GeniusTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F33500A618AB15860086033B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		F33500AE18AB15860086033B /* Duck GeniusTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Duck GeniusTests-Info.plist"; sourceTree = "<group>"; };
+		F33500B018AB15860086033B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F33500B218AB15860086033B /* Duck_GeniusTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Duck_GeniusTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F335007E18AB15850086033B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F335008718AB15860086033B /* CoreGraphics.framework in Frameworks */,
+				F335008918AB15860086033B /* UIKit.framework in Frameworks */,
+				F335008518AB15860086033B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F33500A218AB15860086033B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F33500A718AB15860086033B /* XCTest.framework in Frameworks */,
+				F33500A918AB15860086033B /* UIKit.framework in Frameworks */,
+				F33500A818AB15860086033B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F335007818AB15850086033B = {
+			isa = PBXGroup;
+			children = (
+				F335008A18AB15860086033B /* Duck Genius */,
+				F33500AC18AB15860086033B /* Duck GeniusTests */,
+				F335008318AB15860086033B /* Frameworks */,
+				F335008218AB15860086033B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F335008218AB15860086033B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F335008118AB15860086033B /* Duck Genius.app */,
+				F33500A518AB15860086033B /* Duck GeniusTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F335008318AB15860086033B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F335008418AB15860086033B /* Foundation.framework */,
+				F335008618AB15860086033B /* CoreGraphics.framework */,
+				F335008818AB15860086033B /* UIKit.framework */,
+				F33500A618AB15860086033B /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F335008A18AB15860086033B /* Duck Genius */ = {
+			isa = PBXGroup;
+			children = (
+				F335009318AB15860086033B /* AppDelegate.h */,
+				F335009418AB15860086033B /* AppDelegate.m */,
+				F335009618AB15860086033B /* Main.storyboard */,
+				F335009918AB15860086033B /* FirstViewController.h */,
+				F335009A18AB15860086033B /* FirstViewController.m */,
+				F335009C18AB15860086033B /* SecondViewController.h */,
+				F335009D18AB15860086033B /* SecondViewController.m */,
+				F335009F18AB15860086033B /* Images.xcassets */,
+				F335008B18AB15860086033B /* Supporting Files */,
+			);
+			path = "Duck Genius";
+			sourceTree = "<group>";
+		};
+		F335008B18AB15860086033B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F335008C18AB15860086033B /* Duck Genius-Info.plist */,
+				F335008D18AB15860086033B /* InfoPlist.strings */,
+				F335009018AB15860086033B /* main.m */,
+				F335009218AB15860086033B /* Duck Genius-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F33500AC18AB15860086033B /* Duck GeniusTests */ = {
+			isa = PBXGroup;
+			children = (
+				F33500B218AB15860086033B /* Duck_GeniusTests.m */,
+				F33500AD18AB15860086033B /* Supporting Files */,
+			);
+			path = "Duck GeniusTests";
+			sourceTree = "<group>";
+		};
+		F33500AD18AB15860086033B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F33500AE18AB15860086033B /* Duck GeniusTests-Info.plist */,
+				F33500AF18AB15860086033B /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F335008018AB15850086033B /* Duck Genius */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F33500B618AB15860086033B /* Build configuration list for PBXNativeTarget "Duck Genius" */;
+			buildPhases = (
+				F335007D18AB15850086033B /* Sources */,
+				F335007E18AB15850086033B /* Frameworks */,
+				F335007F18AB15850086033B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Duck Genius";
+			productName = "Duck Genius";
+			productReference = F335008118AB15860086033B /* Duck Genius.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F33500A418AB15860086033B /* Duck GeniusTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F33500B918AB15860086033B /* Build configuration list for PBXNativeTarget "Duck GeniusTests" */;
+			buildPhases = (
+				F33500A118AB15860086033B /* Sources */,
+				F33500A218AB15860086033B /* Frameworks */,
+				F33500A318AB15860086033B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F33500AB18AB15860086033B /* PBXTargetDependency */,
+			);
+			name = "Duck GeniusTests";
+			productName = "Duck GeniusTests";
+			productReference = F33500A518AB15860086033B /* Duck GeniusTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F335007918AB15850086033B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Mark Meyer";
+				TargetAttributes = {
+					F33500A418AB15860086033B = {
+						TestTargetID = F335008018AB15850086033B;
+					};
+				};
+			};
+			buildConfigurationList = F335007C18AB15850086033B /* Build configuration list for PBXProject "Duck Genius" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F335007818AB15850086033B;
+			productRefGroup = F335008218AB15860086033B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F335008018AB15850086033B /* Duck Genius */,
+				F33500A418AB15860086033B /* Duck GeniusTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F335007F18AB15850086033B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F33500A018AB15860086033B /* Images.xcassets in Resources */,
+				F335008F18AB15860086033B /* InfoPlist.strings in Resources */,
+				F335009818AB15860086033B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F33500A318AB15860086033B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F33500B118AB15860086033B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F335007D18AB15850086033B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F335009E18AB15860086033B /* SecondViewController.m in Sources */,
+				F335009518AB15860086033B /* AppDelegate.m in Sources */,
+				F335009B18AB15860086033B /* FirstViewController.m in Sources */,
+				F335009118AB15860086033B /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F33500A118AB15860086033B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F33500B318AB15860086033B /* Duck_GeniusTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F33500AB18AB15860086033B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F335008018AB15850086033B /* Duck Genius */;
+			targetProxy = F33500AA18AB15860086033B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F335008D18AB15860086033B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F335008E18AB15860086033B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F335009618AB15860086033B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F335009718AB15860086033B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F33500AF18AB15860086033B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F33500B018AB15860086033B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F33500B418AB15860086033B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F33500B518AB15860086033B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F33500B718AB15860086033B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Duck Genius/Duck Genius-Prefix.pch";
+				INFOPLIST_FILE = "Duck Genius/Duck Genius-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F33500B818AB15860086033B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Duck Genius/Duck Genius-Prefix.pch";
+				INFOPLIST_FILE = "Duck Genius/Duck Genius-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		F33500BA18AB15860086033B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Duck Genius.app/Duck Genius";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Duck Genius/Duck Genius-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Duck GeniusTests/Duck GeniusTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		F33500BB18AB15860086033B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Duck Genius.app/Duck Genius";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Duck Genius/Duck Genius-Prefix.pch";
+				INFOPLIST_FILE = "Duck GeniusTests/Duck GeniusTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F335007C18AB15850086033B /* Build configuration list for PBXProject "Duck Genius" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F33500B418AB15860086033B /* Debug */,
+				F33500B518AB15860086033B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F33500B618AB15860086033B /* Build configuration list for PBXNativeTarget "Duck Genius" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F33500B718AB15860086033B /* Debug */,
+				F33500B818AB15860086033B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F33500B918AB15860086033B /* Build configuration list for PBXNativeTarget "Duck GeniusTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F33500BA18AB15860086033B /* Debug */,
+				F33500BB18AB15860086033B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F335007918AB15850086033B /* Project object */;
+}
