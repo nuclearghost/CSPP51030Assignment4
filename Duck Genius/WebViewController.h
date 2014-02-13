@@ -10,4 +10,12 @@
 
 @interface WebViewController : UIViewController
 
+@property (strong, nonatomic) NSString *url;
+
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
+
+- (IBAction)refreshTapped:(id)sender;
+- (IBAction)backTapped:(id)sender;
+- (IBAction)forwardTapped:(id)sender;
+
 @end

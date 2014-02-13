@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F30124C418AC6AA90078B35E /* Next.png in Resources */ = {isa = PBXBuildFile; fileRef = F30124C318AC6AA90078B35E /* Next.png */; };
+		F30124C618AC6ABF0078B35E /* Next@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F30124C518AC6ABF0078B35E /* Next@2x.png */; };
+		F30124C818AC6AFD0078B35E /* Previous.png in Resources */ = {isa = PBXBuildFile; fileRef = F30124C718AC6AFD0078B35E /* Previous.png */; };
+		F30124CA18AC6B070078B35E /* Previous@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F30124C918AC6B070078B35E /* Previous@2x.png */; };
+		F30124CC18AC6B440078B35E /* Reset.png in Resources */ = {isa = PBXBuildFile; fileRef = F30124CB18AC6B440078B35E /* Reset.png */; };
+		F30124CE18AC6B5F0078B35E /* Reset@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F30124CD18AC6B5F0078B35E /* Reset@2x.png */; };
 		F335008518AB15860086033B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F335008418AB15860086033B /* Foundation.framework */; };
 		F335008718AB15860086033B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F335008618AB15860086033B /* CoreGraphics.framework */; };
 		F335008918AB15860086033B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F335008818AB15860086033B /* UIKit.framework */; };
@@ -41,6 +47,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F30124C318AC6AA90078B35E /* Next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Next.png; path = ../../../../../../Downloads/pixellove_free/1x_normal/Next.png; sourceTree = "<group>"; };
+		F30124C518AC6ABF0078B35E /* Next@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Next@2x.png"; path = "../../../../../../Downloads/pixellove_free/2x_normal/Next@2x.png"; sourceTree = "<group>"; };
+		F30124C718AC6AFD0078B35E /* Previous.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Previous.png; path = ../../../../../../Downloads/pixellove_free/1x_normal/Previous.png; sourceTree = "<group>"; };
+		F30124C918AC6B070078B35E /* Previous@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Previous@2x.png"; path = "../../../../../../Downloads/pixellove_free/2x_normal/Previous@2x.png"; sourceTree = "<group>"; };
+		F30124CB18AC6B440078B35E /* Reset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Reset.png; path = ../../../../../../Downloads/pixellove_free/1x_normal/Reset.png; sourceTree = "<group>"; };
+		F30124CD18AC6B5F0078B35E /* Reset@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Reset@2x.png"; path = "../../../../../../Downloads/pixellove_free/2x_normal/Reset@2x.png"; sourceTree = "<group>"; };
 		F335008118AB15860086033B /* Duck Genius.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Duck Genius.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F335008418AB15860086033B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F335008618AB15860086033B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -179,6 +191,12 @@
 		F33500C518AB208F0086033B /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				F30124CD18AC6B5F0078B35E /* Reset@2x.png */,
+				F30124CB18AC6B440078B35E /* Reset.png */,
+				F30124C918AC6B070078B35E /* Previous@2x.png */,
+				F30124C718AC6AFD0078B35E /* Previous.png */,
+				F30124C518AC6ABF0078B35E /* Next@2x.png */,
+				F30124C318AC6AA90078B35E /* Next.png */,
 				F33500C218AB18E70086033B /* Search@2x.png */,
 				F33500C018AB18D80086033B /* Search.png */,
 				F33500BE18AB189C0086033B /* Recents@2x.png */,
@@ -265,11 +283,17 @@
 			files = (
 				F33500A018AB15860086033B /* Images.xcassets in Resources */,
 				F33500C118AB18D80086033B /* Search.png in Resources */,
+				F30124C818AC6AFD0078B35E /* Previous.png in Resources */,
+				F30124C418AC6AA90078B35E /* Next.png in Resources */,
 				F335008F18AB15860086033B /* InfoPlist.strings in Resources */,
 				F33500BF18AB189C0086033B /* Recents@2x.png in Resources */,
 				F33500C318AB18E70086033B /* Search@2x.png in Resources */,
 				F33500BD18AB188C0086033B /* Recents.png in Resources */,
+				F30124CA18AC6B070078B35E /* Previous@2x.png in Resources */,
+				F30124C618AC6ABF0078B35E /* Next@2x.png in Resources */,
+				F30124CE18AC6B5F0078B35E /* Reset@2x.png in Resources */,
 				F335009818AB15860086033B /* Main.storyboard in Resources */,
+				F30124CC18AC6B440078B35E /* Reset.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,6 +526,7 @@
 				F33500B818AB15860086033B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F33500B918AB15860086033B /* Build configuration list for PBXNativeTarget "Duck GeniusTests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +535,7 @@
 				F33500BB18AB15860086033B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

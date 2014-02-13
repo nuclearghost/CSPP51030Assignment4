@@ -82,7 +82,30 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem image="Reset.png" id="bow-Sf-nip">
+                            <connections>
+                                <action selector="refreshTapped:" destination="0pu-Of-mUJ" id="zTV-hu-rve"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="L6e-Oq-JSn"/>
+                        <barButtonItem image="Previous.png" id="y0O-aH-31A">
+                            <connections>
+                                <action selector="backTapped:" destination="0pu-Of-mUJ" id="Kd1-Q9-0ee"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="KhS-i5-tai"/>
+                        <barButtonItem image="Next.png" id="cIb-pO-Mc4">
+                            <connections>
+                                <action selector="forwardTapped:" destination="0pu-Of-mUJ" id="kBb-Na-umN"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" id="aWY-dX-AY3"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="webView" destination="z3v-w7-fUd" id="7Rc-jq-GIE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F0d-VQ-wfc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -175,7 +198,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Next.png" width="11" height="20"/>
+        <image name="Previous.png" width="11" height="20"/>
         <image name="Recents.png" width="24" height="24"/>
+        <image name="Reset.png" width="28" height="24"/>
         <image name="Search.png" width="25" height="24"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
