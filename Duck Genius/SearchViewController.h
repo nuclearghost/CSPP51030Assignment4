@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "SearchCell.h"
+#import "WebViewController.h"
 
 @interface SearchViewController : UITableViewController
 

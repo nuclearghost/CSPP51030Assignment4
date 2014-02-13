@@ -48,7 +48,8 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.searchResults.count;
+    NSMutableArray *arr = [self.searchResults objectForKey:@"RelatedTopics"];
+    return arr.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -56,9 +57,10 @@
     static NSString *CellIdentifier = @"SearchCell";
     SearchCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    NSArray *arr = [self.searchResults objectForKey:@"RelatedTopics"];
-    cell.text.text = [NSString stringWithFormat:@"Index %d", indexPath.row];
-    cell.label.text = [NSString stringWithFormat:@"Index %@", arr[indexPath.row]];
+    NSMutableArray *arr = [self.searchResults objectForKey:@"RelatedTopics"];
+    NSDictionary *dict = [arr objectAtIndex:indexPath.row];
+    cell.text.text = [NSString stringWithFormat:@"%@", [dict objectForKey:@"Text"]];
+    cell.label.text = [NSString stringWithFormat:@"%@", [dict objectForKey:@"FirstURL"]];
     
     return cell;
 }
@@ -69,8 +71,12 @@
 // In a story board-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    NSLog(@"Prepare for segue");
+    
+    SearchCell *cell = (SearchCell*)sender;
+    
+    WebViewController *wvc = (WebViewController*)segue.destinationViewController;
+    wvc.url = cell.label.text;
 }
 
 - (IBAction)addButtonTapped:(id)sender {

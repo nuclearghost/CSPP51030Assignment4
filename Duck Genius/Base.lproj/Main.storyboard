@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--Search View Controller - Root View Controller-->
+        <!--Search View Controller-->
         <scene sceneID="VCV-Md-j75">
             <objects>
                 <tableViewController id="xcX-7s-Mbb" customClass="SearchViewController" sceneMemberID="viewController">
@@ -13,22 +13,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SearchCell" rowHeight="127" id="lek-e7-KFW" customClass="SearchCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SearchCell" rowHeight="127" id="lek-e7-KFW" customClass="SearchCell">
                                 <rect key="frame" x="0.0" y="86" width="320" height="127"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lek-e7-KFW" id="JUk-3d-dLO">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="126"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="126"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" text="Lorem ipsum dolor sit er elit " selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KkC-Qc-QDt">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="77"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="77"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FirstURL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wj1-OB-dwC">
-                                            <rect key="frame" x="20" y="85" width="67" height="21"/>
+                                            <rect key="frame" x="20" y="85" width="280" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="highlightedColor"/>
@@ -38,11 +38,12 @@
                                 <connections>
                                     <outlet property="label" destination="Wj1-OB-dwC" id="FCY-Cb-JAU"/>
                                     <outlet property="text" destination="KkC-Qc-QDt" id="Ozm-T3-TNQ"/>
+                                    <segue destination="0pu-Of-mUJ" kind="push" id="Cdx-1m-ceR"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="wkt-my-R9b">
+                    <navigationItem key="navigationItem" id="wkt-my-R9b">
                         <barButtonItem key="leftBarButtonItem" style="done" id="LwB-ET-ea7">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" id="ztn-W0-3RC">
                                 <rect key="frame" x="16" y="11" width="22" height="22"/>
@@ -54,9 +55,6 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <segue destination="0pu-Of-mUJ" kind="push" id="RzT-1v-ViJ"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ryz-Pf-g55" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -111,7 +109,7 @@
             </objects>
             <point key="canvasLocation" x="1790" y="-205"/>
         </scene>
-        <!--Recent Searches View Controller - Root View Controller-->
+        <!--Recent Searches View Controller - Recent Searches-->
         <scene sceneID="mJq-pR-Rjp">
             <objects>
                 <tableViewController id="aof-gY-Zld" customClass="RecentSearchesViewController" sceneMemberID="viewController">
@@ -139,7 +137,7 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="FkM-QH-DZb"/>
+                    <navigationItem key="navigationItem" title="Recent Searches" id="FkM-QH-DZb"/>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="t7c-T2-yJM">
                         <autoresizingMask key="autoresizingMask"/>
                         <connections>
