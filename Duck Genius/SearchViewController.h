@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SearchCell.h"
 
 @interface SearchViewController : UITableViewController
-- (IBAction)addButtonTapped:(id)sender;
 
 @property (strong,nonatomic) NSMutableDictionary *searchResults;
+
+- (IBAction)addButtonTapped:(id)sender;
 
 @end
