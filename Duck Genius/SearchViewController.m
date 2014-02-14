@@ -62,6 +62,10 @@
     cell.text.text = [NSString stringWithFormat:@"%@", [dict objectForKey:@"Text"]];
     cell.label.text = [NSString stringWithFormat:@"%@", [dict objectForKey:@"FirstURL"]];
     
+    NSDictionary *iconDict = [dict objectForKey:@"Icon"];
+    NSString *url =[NSString stringWithFormat:@"%@", [iconDict objectForKey:@"URL"]];
+    cell.img.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:url]]];
+    
     return cell;
 }
 
@@ -95,7 +99,7 @@
 
 - (void)downloadData:(NSString*)queryTerm andStoreInUserDefaults:(BOOL)flag
 {
-    NSString *query = [NSString stringWithFormat:@"http://api.duckduckgo.com/?q=%@&format=json&pretty=1",queryTerm];
+    NSString *query = [NSString stringWithFormat:@"http://api.duckduckgo.com/?q=%@&format=json&pretty=1", [queryTerm stringByReplacingOccurrencesOfString:@" " withString:@"%20"]];
     
     NSURLSession *session = [NSURLSession sharedSession];
     [[session dataTaskWithURL:[NSURL URLWithString:query]
