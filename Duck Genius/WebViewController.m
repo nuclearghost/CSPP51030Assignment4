@@ -22,6 +22,15 @@
         [NSURLRequest requestWithURL:[NSURL URLWithString:self.url]];
     
     [self.webView loadRequest:request];
+    
+    UIBarButtonItem *refreshBtn = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Reset.png"] style:UIBarButtonItemStylePlain target:self action:@selector(refreshTapped:)];
+    UIBarButtonItem *backBtn = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Previous.png"] style:UIBarButtonItemStylePlain target:self action:@selector(backTapped:)];
+    UIBarButtonItem *forwardBtn = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Next.png"] style:UIBarButtonItemStylePlain target:self action:@selector(forwardTapped:)];
+    
+    self.navigationItem.leftItemsSupplementBackButton = YES;
+    self.navigationItem.leftBarButtonItem = refreshBtn;
+    
+    self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:forwardBtn, backBtn, nil];
 }
 
 - (void)didReceiveMemoryWarning

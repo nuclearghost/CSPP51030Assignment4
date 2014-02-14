@@ -68,11 +68,8 @@
 
 #pragma mark - Navigation
 
-// In a story board-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    NSLog(@"Prepare for segue");
-    
     SearchCell *cell = (SearchCell*)sender;
     
     WebViewController *wvc = (WebViewController*)segue.destinationViewController;
@@ -91,7 +88,9 @@
     UITextField * alertTextField = [alertView textFieldAtIndex:0];
     NSLog(@"alerttextfiled - %@",alertTextField.text);
     // Pass this text to our download method
-    [self downloadData:alertTextField.text];
+    if ([alertTextField.text length] != 0){
+        [self downloadData:alertTextField.text];
+    }
 }
 
 - (void)downloadData:(NSString*)queryTerm
