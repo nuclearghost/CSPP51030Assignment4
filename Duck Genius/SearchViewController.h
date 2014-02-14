@@ -15,5 +15,6 @@
 @property (strong,nonatomic) NSMutableDictionary *searchResults;
 
 - (IBAction)addButtonTapped:(id)sender;
+- (void)downloadData:(NSString*)queryTerm andStoreInUserDefaults:(BOOL)flag;
 
 @end

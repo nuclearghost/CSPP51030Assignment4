@@ -113,15 +113,13 @@
     [defaults synchronize];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a story board-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    UINavigationController *nc =  (UINavigationController*)[self.tabBarController viewControllers][0];
+    SearchViewController *svc = (SearchViewController*)[nc viewControllers][0];
+    [svc downloadData:_recentSearches[indexPath.row]  andStoreInUserDefaults:YES];
+    [self.tabBarController setSelectedIndex:0];
 }
- */
+ 
 
 @end
