@@ -10,6 +10,8 @@
 
 @interface RecentSearchesViewController ()
 
+@property (strong, nonatomic) NSMutableArray *recentSearches;
+
 @end
 
 @implementation RecentSearchesViewController
@@ -32,6 +34,16 @@
     // self.clearsSelectionOnViewWillAppear = NO;
  
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    // Test is RecentSearcher array is in defaults, if not create it
+    if (![defaults objectForKey:@"RecentSearches"]) {
+        // Initialize the array
+        _recentSearches = [[NSMutableArray alloc] init];
+    } else {
+        // Make a mutable copy of the array so we can update it
+        _recentSearches = [[defaults objectForKey:@"RecentSearches"] mutableCopy];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,16 +56,12 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return [_recentSearches count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -61,27 +69,27 @@
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    // Configure the cell...
+    cell.textLabel.text = _recentSearches[indexPath.row];
     
     return cell;
 }
 
 - (IBAction)refreshTable:(id)sender {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    _recentSearches = [[defaults objectForKey:@"RecentSearches"] mutableCopy];
+    [self.tableView reloadData];
+    [(UIRefreshControl *)sender endRefreshing];
 }
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
 
-/*
+
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [_recentSearches removeObjectAtIndex:indexPath.row];
+        
+        [self synchornizeUserDefaults];
+        
         // Delete the row from the data source
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }   
@@ -89,23 +97,23 @@
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
-*/
 
-/*
+
 // Override to support rearranging the table view.
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
 {
-}
-*/
+    id item = _recentSearches[fromIndexPath.row];
+    [_recentSearches insertObject:item atIndex:toIndexPath.row];
+    [self synchornizeUserDefaults];
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
 }
-*/
+
+- (void)synchornizeUserDefaults
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:_recentSearches forKey:@"RecentSearches"];
+    [defaults synchronize];
+}
 
 /*
 #pragma mark - Navigation
@@ -116,7 +124,6 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-
  */
 
 @end

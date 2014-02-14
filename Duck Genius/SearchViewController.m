@@ -49,7 +49,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     NSMutableArray *arr = [self.searchResults objectForKey:@"RelatedTopics"];
-    return arr.count;
+    return arr ? arr.count : 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -113,5 +113,24 @@
                 });
                 
             }] resume];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    // Test is RecentSearcher array is in defaults, if not create it
+    NSMutableArray *recentSearches;
+    if (![defaults objectForKey:@"RecentSearches"]) {
+        // Initialize the array
+        recentSearches = [[NSMutableArray alloc] init];
+    } else {
+        // Make a mutable copy of the array so we can update it
+        recentSearches = [[defaults objectForKey:@"RecentSearches"] mutableCopy];
+    }
+    // Add the term to local array
+    [recentSearches addObject:queryTerm];
+    // Copy local array to user defaults
+    [defaults setObject:recentSearches forKey:@"RecentSearches"];
+    // Write it to disk
+    [defaults synchronize];
+    // Call dictionaryRepresentation on default to display readable output
+    NSLog(@"Defaults:%@",[defaults dictionaryRepresentation]);
 }
 @end
