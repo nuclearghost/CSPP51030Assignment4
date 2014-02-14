@@ -92,10 +92,7 @@
         
         // Delete the row from the data source
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+    }
 }
 
 
@@ -103,6 +100,7 @@
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
 {
     id item = _recentSearches[fromIndexPath.row];
+    [_recentSearches removeObjectAtIndex:fromIndexPath.row];
     [_recentSearches insertObject:item atIndex:toIndexPath.row];
     [self synchornizeUserDefaults];
 

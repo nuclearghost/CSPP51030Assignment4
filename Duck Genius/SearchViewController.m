@@ -30,7 +30,7 @@
     // Uncomment the following line to preserve selection between presentations.
     self.clearsSelectionOnViewWillAppear = NO;
  
-    [self downloadData:@"Chicago"];
+    [self downloadData:@"Chicago" andStoreInUserDefaults:NO];
 }
 
 - (void)didReceiveMemoryWarning
@@ -89,11 +89,11 @@
     NSLog(@"alerttextfiled - %@",alertTextField.text);
     // Pass this text to our download method
     if ([alertTextField.text length] != 0){
-        [self downloadData:alertTextField.text];
+        [self downloadData:alertTextField.text andStoreInUserDefaults:YES];
     }
 }
 
-- (void)downloadData:(NSString*)queryTerm
+- (void)downloadData:(NSString*)queryTerm andStoreInUserDefaults:(BOOL)flag
 {
     NSString *query = [NSString stringWithFormat:@"http://api.duckduckgo.com/?q=%@&format=json&pretty=1",queryTerm];
     
@@ -114,23 +114,22 @@
                 
             }] resume];
     
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    // Test is RecentSearcher array is in defaults, if not create it
-    NSMutableArray *recentSearches;
-    if (![defaults objectForKey:@"RecentSearches"]) {
-        // Initialize the array
-        recentSearches = [[NSMutableArray alloc] init];
-    } else {
-        // Make a mutable copy of the array so we can update it
-        recentSearches = [[defaults objectForKey:@"RecentSearches"] mutableCopy];
+    if (flag)
+    {
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+
+        NSMutableArray *recentSearches;
+        if (![defaults objectForKey:@"RecentSearches"]) {
+            recentSearches = [[NSMutableArray alloc] init];
+        } else {
+            recentSearches = [[defaults objectForKey:@"RecentSearches"] mutableCopy];
+        }
+
+        [recentSearches addObject:queryTerm];
+
+        [defaults setObject:recentSearches forKey:@"RecentSearches"];
+
+        [defaults synchronize];
     }
-    // Add the term to local array
-    [recentSearches addObject:queryTerm];
-    // Copy local array to user defaults
-    [defaults setObject:recentSearches forKey:@"RecentSearches"];
-    // Write it to disk
-    [defaults synchronize];
-    // Call dictionaryRepresentation on default to display readable output
-    NSLog(@"Defaults:%@",[defaults dictionaryRepresentation]);
 }
 @end
