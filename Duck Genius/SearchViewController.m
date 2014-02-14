@@ -29,7 +29,9 @@
 
     // Uncomment the following line to preserve selection between presentations.
     self.clearsSelectionOnViewWillAppear = NO;
- 
+    
+    self.relatedResults = [[NSMutableArray alloc] init];
+    
     [self downloadData:@"Chicago" andStoreInUserDefaults:NO];
 }
 
@@ -48,8 +50,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSMutableArray *arr = [self.searchResults objectForKey:@"RelatedTopics"];
-    return arr ? arr.count : 0;
+    return [self.relatedResults count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -57,8 +58,7 @@
     static NSString *CellIdentifier = @"SearchCell";
     SearchCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    NSMutableArray *arr = [self.searchResults objectForKey:@"RelatedTopics"];
-    NSDictionary *dict = [arr objectAtIndex:indexPath.row];
+    NSDictionary *dict = [self.relatedResults objectAtIndex:indexPath.row];
     cell.text.text = [NSString stringWithFormat:@"%@", [dict objectForKey:@"Text"]];
     cell.label.text = [NSString stringWithFormat:@"%@", [dict objectForKey:@"FirstURL"]];
     
@@ -111,6 +111,18 @@
                 // Update the searchResults property
                 self.searchResults = [results mutableCopy];
                 
+                [self.relatedResults removeAllObjects];
+                
+                //I did this work below, because the related topics array actually
+                //contained objects of different types. I decided to only use the first
+                //layer of objects instead of iterating over all the sub arrays
+                NSMutableArray *arr = [self.searchResults objectForKey:@"RelatedTopics"];
+                for (NSDictionary *obj in arr) {
+                    if ([obj objectForKey:@"FirstURL"]){
+                        [self.relatedResults addObject:obj];
+                    }
+                }
+
                 // Refresh the table on main thread
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [self.tableView reloadData];

@@ -13,6 +13,7 @@
 @interface SearchViewController : UITableViewController
 
 @property (strong,nonatomic) NSMutableDictionary *searchResults;
+@property (strong,nonatomic) NSMutableArray *relatedResults;
 
 - (IBAction)addButtonTapped:(id)sender;
 - (void)downloadData:(NSString*)queryTerm andStoreInUserDefaults:(BOOL)flag;
